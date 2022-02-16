@@ -5,9 +5,8 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
+//Card Storage / loc Idea: Create 1d array of 7 piles to store all main cards then 5 extra piles for sorted and deck
 import javax.imageio.ImageIO;
-
 public class GameBoard implements Drawable, Updateable {
 	
 
