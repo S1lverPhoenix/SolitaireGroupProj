@@ -14,8 +14,21 @@ public class Card implements Drawable, Updateable{
         suit = s;
         value = v;
     }
+    public String setLoc(int x, int y){
+        locX = x;
+        locY = y;
+        return "("+x+" , "+y+")";
+    }
 
+    String[] suits = {"s","h","d","c"};
+    String[] nums = {"1","2","3","4","5","6","7","8","9","10","j","q","k"};
 
+    public Card(int s, int n){
+        String c = "images/cards/";
+        if(!faceUp)
+            c+="b1fv.png";
+        
+    }
 
     @Override
     public void update(ActionEvent a) {
@@ -25,6 +38,7 @@ public class Card implements Drawable, Updateable{
 
     @Override
     public void draw(Graphics g) {
+        
         // TODO Auto-generated method stub
         
     }
