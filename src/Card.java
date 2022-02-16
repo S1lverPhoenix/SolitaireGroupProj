@@ -3,8 +3,8 @@ import java.awt.event.ActionEvent;
 
 /** represents a playing card that can draw itself. */
 public class Card implements Drawable, Updateable{
-    private int locX;
-    private int locY;
+    private int locX; //location for x-coordinate
+    private int locY; //location for y-coordinate
     private String suit;
     private boolean faceUp;
     private int value;
@@ -14,8 +14,21 @@ public class Card implements Drawable, Updateable{
         suit = s;
         value = v;
     }
+    public String setLoc(int x, int y){
+        locX = x;
+        locY = y;
+        return "("+x+" , "+y+")";
+    }
 
+    String[] suits = {"s","h","d","c"};
+    String[] nums = {"1","2","3","4","5","6","7","8","9","10","j","q","k"};
 
+    public Card(int s, int n){
+        String c = "images/cards/";
+        if(!faceUp)
+            c+="b1fv.png";
+        
+    }
 
     @Override
     public void update(ActionEvent a) {
@@ -25,8 +38,13 @@ public class Card implements Drawable, Updateable{
 
     @Override
     public void draw(Graphics g) {
+        
         // TODO Auto-generated method stub
         
     }
-
 }
+//array of string to represent each suite
+//array of string representing thr value
+//back is static image(back of card) shared with all cards (private static image back;) 
+// ->one image all back of cards share
+//String s = "images/cards/"
