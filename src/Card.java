@@ -3,8 +3,8 @@ import java.awt.event.ActionEvent;
 
 /** represents a playing card that can draw itself. */
 public class Card implements Drawable, Updateable{
-    private int locX;
-    private int locY;
+    private int locX; //location for x-coordinate
+    private int locY; //location for y-coordinate
     private String suit;
     private boolean faceUp;
     private int value;
