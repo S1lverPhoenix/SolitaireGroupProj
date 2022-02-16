@@ -44,5 +44,9 @@ public class Card implements Drawable, Updateable{
         // TODO Auto-generated method stub
         
     }
-
 }
+//array of string to represent each suite
+//array of string representing thr value
+//back is static image(back of card) shared with all cards (private static image back;) 
+// ->one image all back of cards share
+//String s = "images/cards/"
