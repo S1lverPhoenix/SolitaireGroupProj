@@ -1,5 +1,9 @@
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.io.File;
+
 
 /** represents a playing card that can draw itself. */
 public class Card implements Drawable, Updateable{
@@ -9,6 +13,7 @@ public class Card implements Drawable, Updateable{
     private boolean faceUp;
     private int value;
     private boolean isRed;
+    private String cardImg;
 
     public Card(String s, int v){
         suit = s;
@@ -24,13 +29,15 @@ public class Card implements Drawable, Updateable{
     String[] nums = {"1","2","3","4","5","6","7","8","9","10","j","q","k"};
 
     public Card(int s, int n){
-        String c = "images/cards/";
+        cardImg = "images/cards/";
         if(!faceUp)
-            c+="b1fv.png";
+            cardImg+="b1fv.png";
         else{
-            c+=suits[s]+nums[n]+".png";
+            cardImg+=suits[s]+nums[n]+".png";
         }
     }
+
+
 
     @Override
     public void update(ActionEvent a) {
@@ -40,7 +47,11 @@ public class Card implements Drawable, Updateable{
 
     @Override
     public void draw(Graphics g) {
-        
+        try {
+            g.drawImage(ImageIO.read(new File(cardImg)), locX, locY, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         // TODO Auto-generated method stub
         
     }
