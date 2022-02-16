@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-import java.util.ArrayList;
-=======
 
 import java.util.ArrayList; 
 
->>>>>>> 71d4ba834df6d8b4c0aa218973691034ab399789
+// <<<<<<< HEAD
+// >>>>>>> 71d4ba834df6d8b4c0aa218973691034ab399789
+// =======
+// >>>>>>> 71d4ba834df6d8b4c0aa218973691034ab399789
 /** A Pile is a collection of cards.  This needs to be
  * Drawable because it will be shown on the GUI. Put code
  * here that ALL Piles share.  The ways in which Piles are 
@@ -18,11 +18,14 @@ public abstract class Pile implements Drawable, Updateable {
     private int locX;
     private int locY;
     private int numCards;
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
 
-=======
+// =======
     public ArrayList<Card> cards = new ArrayList<>();
 >>>>>>> 71d4ba834df6d8b4c0aa218973691034ab399789
+=======
+    
 }
 //location(for each pile) -> changes when added to a new pile
 //arraylist(easier to add)
