@@ -23,8 +23,7 @@ public abstract class Pile implements Drawable, Updateable {
 
 // =======
     public ArrayList<Card> cards = new ArrayList<>();
->>>>>>> 71d4ba834df6d8b4c0aa218973691034ab399789
-=======
+
     
 }
 //location(for each pile) -> changes when added to a new pile

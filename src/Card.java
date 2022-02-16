@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.awt.*;
 
 
 /** represents a playing card that can draw itself. */
@@ -11,11 +12,12 @@ public class Card implements Drawable, Updateable{
     private int locY; //location for y-coordinate
     private String suit;
     private boolean faceUp;
-    private int value;
+    private String value;
     private boolean isRed;
     private String cardImg;
+    private Image img;
 
-    public Card(String s, int v){
+    public Card(String s, String v){
         suit = s;
         value = v;
     }
