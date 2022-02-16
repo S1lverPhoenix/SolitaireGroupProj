@@ -14,7 +14,7 @@ public class Card implements Drawable, Updateable{
     private boolean faceUp;
     private String value;
     private boolean isRed;
-    private String cardImg;
+    private Image backImg;
     private Image img;
 
     public Card(String s, String v){
@@ -31,31 +31,26 @@ public class Card implements Drawable, Updateable{
     String[] nums = {"1","2","3","4","5","6","7","8","9","10","j","q","k"};
 
     public Card(int s, int n){
-        cardImg = "images/cards/";
-        if(!faceUp)
-            cardImg+="b1fv.png";
-        else{
-            cardImg+=suits[s]+nums[n]+".png";
+        try {
+            backImg = ImageIO.read(new File("images/cards/b1fv.png"));
+            img = ImageIO.read(new File("images/cards/"+suits[s]+nums[n]+".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
 
 
     @Override
-    public void update(ActionEvent a) {
-        // TODO Auto-generated method stub
-        
+    public void update(ActionEvent a) {        
     }
 
     @Override
     public void draw(Graphics g) {
-        try {
-            g.drawImage(ImageIO.read(new File(cardImg)), locX, locY, null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        // TODO Auto-generated method stub
-        
+        if(!faceUp)
+            g.drawImage(backImg, locX, locY, null);
+        else
+            g.drawImage(img, locX, locY, null);
     }
 }
 //array of string to represent each suite
