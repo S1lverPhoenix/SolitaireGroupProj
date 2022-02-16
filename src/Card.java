@@ -27,7 +27,9 @@ public class Card implements Drawable, Updateable{
         String c = "images/cards/";
         if(!faceUp)
             c+="b1fv.png";
-        
+        else{
+            c+=suits[s]+nums[n]+".png";
+        }
     }
 
     @Override
