@@ -17,6 +17,6 @@ public class Deck {
 				add(new Card(x,i));
 			}
 		}
-	}
+	} 
 
 }
