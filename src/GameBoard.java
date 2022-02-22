@@ -37,8 +37,9 @@ public class GameBoard implements Drawable, Updateable {
 		g.fillRect(0, 0, 3000, 2000);
 		
 		// this is just to test drawing a card
-		Card c = new Card("d", "j");
+		Card c = new Card(1,13);
 		c.setLoc(30, 80);
+		c.switchFace();
 		// g.drawImage(testImage, 30, 80, null);
 		// g.drawImage(backImage, 100, 80, null);
 		// g.drawImage(backImage, 105, 100, null);

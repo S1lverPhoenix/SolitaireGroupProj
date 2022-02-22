@@ -10,35 +10,36 @@ import java.awt.*;
 public class Card implements Drawable, Updateable{
     private int locX; //location for x-coordinate
     private int locY; //location for y-coordinate
-    private String suit;
+    private int suit;
     private boolean faceUp;
-    private String value;
+    private int value;
     private boolean isRed;
     private Image backImg;
     private Image img;
 
-    public Card(String s, String v){
-        suit = s;
-        value = v;
-    }
     public String setLoc(int x, int y){
         locX = x;
         locY = y;
         return "("+x+" , "+y+")";
     }
 
+    public void switchFace(){
+        faceUp = !faceUp;
+    }
+
     String[] suits = {"s","h","d","c"};
     String[] nums = {"1","2","3","4","5","6","7","8","9","10","j","q","k"};
 
     public Card(int s, int n){
+        suit = s;
+        value = n;
         try {
             backImg = ImageIO.read(new File("images/cards/b1fv.png"));
-            img = ImageIO.read(new File("images/cards/"+suits[s]+nums[n]+".png"));
+            img = ImageIO.read(new File("images/cards/"+suits[s]+nums[n-1]+".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
 
     @Override
