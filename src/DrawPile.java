@@ -3,10 +3,6 @@ import java.awt.event.ActionEvent;
 // DrawPile is the pile where all cards come from in the top-left corner
 public class DrawPile extends Pile{
 
-    public void draw3(){
-     
-    }
-
     @Override
     public void draw(Graphics g) {
         // TODO Auto-generated method stub

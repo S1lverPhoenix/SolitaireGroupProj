@@ -18,16 +18,20 @@ public abstract class Pile implements Drawable, Updateable {
     private int locX;
     private int locY;
     private int numCards;
-// <<<<<<< HEAD
-// <<<<<<< HEAD
-
-// =======
     public ArrayList<Card> cards = new ArrayList<>();
 
 public Card getTopCard(){
         Card c = cards.get(cards.size()-1);
         cards.remove(cards.get(cards.size()-1));
         return c;
+ }
+
+ public ArrayList<Card> get3(){
+     ArrayList<Card> temp = new ArrayList<Card>();
+     for(int x = 0; x<3; x++){
+         temp.add(getTopCard());
+     }
+     return temp;
  }
 
  
