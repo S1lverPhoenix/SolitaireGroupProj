@@ -8,8 +8,14 @@ public class DrawPile extends Pile{
     @Override
     public void draw(Graphics g) {
         // TODO Auto-generated method stub
+<<<<<<< Updated upstream
 
 
+=======
+    for(int i=0; i<3; i++){
+        getTopCard();
+    }
+>>>>>>> Stashed changes
     }
 
     @Override

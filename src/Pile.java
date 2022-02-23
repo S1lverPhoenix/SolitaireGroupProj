@@ -23,6 +23,7 @@ public abstract class Pile implements Drawable, Updateable {
 
 // =======
     public ArrayList<Card> cards = new ArrayList<>();
+<<<<<<< Updated upstream
 
     public Card getTopCard(){
         Card c = cards.get(cards.size()-1);
@@ -32,6 +33,8 @@ public abstract class Pile implements Drawable, Updateable {
 
     
 
+=======
+>>>>>>> Stashed changes
     
     
 }
