@@ -31,6 +31,9 @@ public abstract class Pile implements Drawable, Updateable {
     }
 
     
+
+    
+    
 }
 //location(for each pile) -> changes when added to a new pile
 //arraylist(easier to add)

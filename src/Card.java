@@ -17,6 +17,9 @@ public class Card implements Drawable, Updateable{
     private Image backImg;
     private Image img;
 
+    public boolean getIsRed(){
+        return isRed;
+    }
     public String setLoc(int x, int y){
         locX = x;
         locY = y;
