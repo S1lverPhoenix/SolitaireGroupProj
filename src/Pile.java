@@ -19,7 +19,6 @@ public abstract class Pile implements Drawable, Updateable {
     private int locY;
     private int numCards;
     public ArrayList<Card> cards = new ArrayList<>();
-<<<<<<< Updated upstream
 
 public Card getTopCard(){
         Card c = cards.get(cards.size()-1);
@@ -34,14 +33,12 @@ public Card getTopCard(){
      }
      return temp;
  }
-
+public Pile(int x, int y){
+    locX = x;
+    locY = y;
+}
  
 
-    
-
-=======
->>>>>>> Stashed changes
-    
     
 }
 //location(for each pile) -> changes when added to a new pile
