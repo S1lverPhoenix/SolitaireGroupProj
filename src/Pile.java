@@ -24,11 +24,13 @@ public abstract class Pile implements Drawable, Updateable {
 // =======
     public ArrayList<Card> cards = new ArrayList<>();
 
-    public Card getTopCard(){
+public Card getTopCard(){
         Card c = cards.get(cards.size()-1);
         cards.remove(cards.get(cards.size()-1));
         return c;
-    }
+ }
+
+ 
 
     
 }
