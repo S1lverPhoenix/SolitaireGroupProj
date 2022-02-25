@@ -37,6 +37,14 @@ public Pile(int x, int y){
     locX = x;
     locY = y;
 }
+
+public Pile(){
+    
+}
+
+public void addCard(Card c){
+    cards.add(c);
+}
  
 
     

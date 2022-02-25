@@ -14,7 +14,7 @@ public interface Drawable {
      * @param g The Graphics context onto which this Object will 
      * display itself.
      */
-    public void draw(Graphics g){
-        g.drawImage(, x, y, observer)
-    }
+    // public void draw(Graphics g){
+    //     g.drawImage(, x, y, observer)
+    // }
 }

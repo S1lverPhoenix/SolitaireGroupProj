@@ -15,6 +15,10 @@ public class GameBoard implements Drawable, Updateable {
 	
 	 
 	private int numdraws=0;
+	private DrawPile drawPile;
+	private OpenPile openPile;
+	private MainPile mainPile;
+	private SortedPile sortedPile;
 	
 	
 	
@@ -35,12 +39,9 @@ public class GameBoard implements Drawable, Updateable {
 		numdraws++;
 		g.setColor(new Color(40, 155, 70));
 		g.fillRect(0, 0, 3000, 2000);
-		
-		// this is just to test drawing a card
-		Card c = new Card(1,13);
-		c.setLoc(30, 80);
-		c.switchFace();
-		c.draw(g);
+		Card x = new Card(2, 7);
+		drawPile.addCard(x);
+		x.draw(g);
 	}
 
 
