@@ -15,10 +15,19 @@ public class GameBoard implements Drawable, Updateable {
 	
 	 
 	private int numdraws=0;
-	private DrawPile drawPile;
-	private OpenPile openPile;
-	private MainPile mainPile;
-	private SortedPile sortedPile;
+	private DrawPile drawPile = new DrawPile();
+	private OpenPile openPile = new OpenPile(70);
+	private MainPile main1 = new MainPile(80);
+	private MainPile main2 = new MainPile(100);;
+	private MainPile main3 = new MainPile(120);;
+	private MainPile main4 = new MainPile(140);;
+	private MainPile main5 = new MainPile(160);;
+	private MainPile main6 = new MainPile(180);;
+	private MainPile main7 = new MainPile(200);;
+	private SortedPile sorted1;
+	private SortedPile sorted2;
+	private SortedPile sorted3;
+	private SortedPile sorted4;
 	
 	
 	
@@ -42,6 +51,10 @@ public class GameBoard implements Drawable, Updateable {
 		Card x = new Card(2, 7);
 		drawPile.addCard(x);
 		x.draw(g);
+		Card a = new Card(2, 7);
+		a.switchFace();
+		main1.addCard(a);
+		a.draw(g);
 	}
 
 
