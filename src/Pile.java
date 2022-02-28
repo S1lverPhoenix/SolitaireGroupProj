@@ -1,4 +1,5 @@
-
+import java.awt.Graphics;
+import java.awt.Color;
 import java.util.ArrayList; 
 
 /** A Pile is a collection of cards.  This needs to be
@@ -15,6 +16,15 @@ public abstract class Pile implements Drawable, Updateable {
     private int locationY;
     private int numCards;
     public ArrayList<Card> cards = new ArrayList<>();
+
+public void draw(Graphics g){
+    if(cards.isEmpty()){
+        cards.get(cards.size()-1).draw(g);
+    } else {
+        g.setColor(Color.MAGENTA);
+    }
+    g.fillRect(locationX,locationY,50,100);
+}
 
 public Card getTopCard(){
         Card c = cards.get(cards.size()-1);
