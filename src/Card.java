@@ -20,6 +20,15 @@ public class Card implements Drawable, Updateable{
     public boolean getIsRed(){
         return isRed;
     }
+    public boolean isFaceUp(){
+        return faceUp;
+    }
+    public Image getBackImg(){
+        return backImg;
+    }
+    public Image getImg(){
+        return img;
+    }
     public String setLoc(int x, int y){
         locX = x;
         locY = y;
