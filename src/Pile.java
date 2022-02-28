@@ -21,7 +21,7 @@ public void draw(Graphics g){
     if(cards.isEmpty()){
         cards.get(cards.size()-1).draw(g);
     } else {
-        g.setColor(Color.WHITE);
+        g.setColor(Color.MAGENTA);
     }
     g.fillRect(locationX,locationY,50,100);
 }
