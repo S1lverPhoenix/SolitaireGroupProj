@@ -1,11 +1,13 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 // OpenPile is the cards next to the DrawPile
 public class OpenPile extends Pile{
-
-    public OpenPile(int y) {
-        super(50, y);
+    int xLoc;
+    public OpenPile(int x) {
+        super(x, 50);
+        xLoc = x;
     }
 
     @Override
@@ -16,13 +18,16 @@ public class OpenPile extends Pile{
             g.drawRect(xLoc, 150, 50, 100);
         }
         else{
+        int count = 0;
          for(int x = cards.size()-1; x<cards.size()-4; x--){
             if(cards.get(x).isFaceUp()){
-                g.drawImage(cards.get(x).getImg(),xLoc, 150+(x*20), null);
+                g.drawImage(cards.get(x).getImg(),xLoc + (count*20), 150+(x*20), null);
+
             }
             else{
-                g.drawImage(cards.get(x).getBackImg(),xLoc, 150+(x*20), null);
+                g.drawImage(cards.get(x).getBackImg(),xLoc + (count*20), 150+(x*20), null);
             }
+            count++;
         }
         }
     }
